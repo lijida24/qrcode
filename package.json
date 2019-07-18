@@ -1,0 +1,39 @@
+{
+  "name": "qrcode",
+  "version": "0.1.0",
+  "description": "qrcode",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config/pro.js",
+    "dev": "webpack-dev-server  --inline --config webpack.config/dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lijida24/qrcode.git"
+  },
+  "author": "lijida",
+  "license": "ISC",
+  "keywords": [
+    "qrcode"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-transform-object-assign": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.5.0",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/runtime-corejs2": "^7.5.4",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^0.1.19",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.5.4"
+  }
+}

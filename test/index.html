@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>qrcode example</title>
+</head>
+<body>
+	<p>Render in table</p>
+	<div id="qrcodeTable"></div>
+	<p>Render in canvas</p>
+	<div id="qrcodeCanvas"></div>
+	<script src="./qrcode.min.js"></script>
+	<script>
+		new qrcode(document.getElementById('qrcodeCanvas'), {
+			text: 'https://www.163.com'
+		})
+		new qrcode(document.getElementById('qrcodeTable'), {
+			render: "table",
+			text: 'https://www.163.com'
+		})
+	</script>
+</body>
+</html>
