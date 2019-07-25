@@ -4,7 +4,7 @@
   "description": "qrcode for html",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.config/pro.js",
+    "build": "webpack --mode=production --config webpack.config/pro.js",
     "dev": "webpack-dev-server  --inline --config webpack.config/dev.js"
   },
   "repository": {
