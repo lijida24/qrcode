@@ -164,16 +164,16 @@ export default {
     [20, 45, 15, 61, 46, 16]
   ],
   getRSBlocks (typeNumber, errorCorrectLevel) {
-    let rsBlock = this.getRsBlockTable(typeNumber, errorCorrectLevel)
+    const rsBlock = this.getRsBlockTable(typeNumber, errorCorrectLevel)
     if (rsBlock === undefined) {
-      throw new Error("bad rs block @ typeNumber:" + typeNumber + "/errorCorrectLevel:" + errorCorrectLevel)
+      throw new Error('bad rs block @ typeNumber:' + typeNumber + '/errorCorrectLevel:' + errorCorrectLevel)
     }
-    let length = rsBlock.length / 3
-    let list = new Array()
+    const length = rsBlock.length / 3
+    const list = []
     for (let i = 0; i < length; i++) {
-      let count = rsBlock[i * 3 + 0]
-      let totalCount = rsBlock[i * 3 + 1]
-      let dataCount = rsBlock[i * 3 + 2]
+      const count = rsBlock[i * 3 + 0]
+      const totalCount = rsBlock[i * 3 + 1]
+      const dataCount = rsBlock[i * 3 + 2]
       for (let j = 0; j < count; j++) {
         list.push({
           totalCount: totalCount,

@@ -1,10 +1,10 @@
 function QRBitBuffer () {
-  this.buffer = new Array()
+  this.buffer = []
   this.length = 0
 }
 QRBitBuffer.prototype = {
   get: function (index) {
-    let bufIndex = Math.floor(index / 8)
+    const bufIndex = Math.floor(index / 8)
     return ((this.buffer[bufIndex] >>> (7 - index % 8)) & 1) === 1
   },
   put: function (num, length) {
@@ -16,7 +16,7 @@ QRBitBuffer.prototype = {
     return this.length
   },
   putBit: function (bit) {
-    let bufIndex = Math.floor(this.length / 8)
+    const bufIndex = Math.floor(this.length / 8)
     if (this.buffer.length <= bufIndex) {
       this.buffer.push(0)
     }
